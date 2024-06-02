@@ -1,4 +1,4 @@
-let promError = true;
+let promError = false;
 
 function getPromise() {
     return new Promise((resolve, reject) => {
@@ -9,11 +9,16 @@ function getPromise() {
         }else{
             resolve("hat geklappt");
         }
-        }, 300);
+        }, 1000);
       });
 }
 
-function usePromise() {
-    let prom = getPromise();
+async function usePromise() {
+    let prom = "nothing happend";
+    try {
+        prom = await getPromise();
+    } catch (error) {
+        
+    }
     console.log(prom)
 }
