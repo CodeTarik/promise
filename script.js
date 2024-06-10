@@ -1,4 +1,4 @@
-let promError = true;
+let promError = false;
 
 function getPromise() {
     return myPromise = new Promise((resolve, reject) => {
